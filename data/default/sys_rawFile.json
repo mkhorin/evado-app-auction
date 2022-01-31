@@ -1,0 +1,146 @@
+[
+  {
+    "_id": {
+      "$oid": "61eca42d0c7362d0af467014"
+    },
+    "file": "2022-01/61eca42d0c7362d0af467013",
+    "name": "item1.jpg",
+    "size": 9958,
+    "type": "image/jpeg",
+    "createdAt": {
+      "$date": "2022-01-23T00:41:17.944Z"
+    },
+    "creator": {
+      "$oid": "5f24b7b54d618d12d44b3b9e"
+    },
+    "owner": {
+      "$oid": "61eca42e0c7362d0af467015"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "61eca43a0c7362d0af467017"
+    },
+    "file": "2022-01/61eca43a0c7362d0af467016",
+    "name": "item3.jpg",
+    "size": 6644,
+    "type": "image/jpeg",
+    "createdAt": {
+      "$date": "2022-01-23T00:41:30.782Z"
+    },
+    "creator": {
+      "$oid": "5f24b7b54d618d12d44b3b9e"
+    },
+    "owner": {
+      "$oid": "61eca43b0c7362d0af467018"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "61eca6a90c7362d0af467020"
+    },
+    "file": "2022-01/61eca6a90c7362d0af46701f",
+    "name": "item8.jpg",
+    "size": 5704,
+    "type": "image/jpeg",
+    "createdAt": {
+      "$date": "2022-01-23T00:51:53.737Z"
+    },
+    "creator": {
+      "$oid": "5f24bc814d618d12d44b3bc5"
+    },
+    "owner": {
+      "$oid": "61eca6ab0c7362d0af467021"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "61eca6b20c7362d0af467023"
+    },
+    "file": "2022-01/61eca6b20c7362d0af467022",
+    "name": "item7.jpg",
+    "size": 5915,
+    "type": "image/jpeg",
+    "createdAt": {
+      "$date": "2022-01-23T00:52:02.878Z"
+    },
+    "creator": {
+      "$oid": "5f24bc814d618d12d44b3bc5"
+    },
+    "owner": {
+      "$oid": "61eca6b40c7362d0af467024"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "61eca6c40c7362d0af467026"
+    },
+    "file": "2022-01/61eca6c40c7362d0af467025",
+    "name": "item6.jpg",
+    "size": 7387,
+    "type": "image/jpeg",
+    "createdAt": {
+      "$date": "2022-01-23T00:52:20.420Z"
+    },
+    "creator": {
+      "$oid": "5f24bc814d618d12d44b3bc5"
+    },
+    "owner": {
+      "$oid": "61eca6c60c7362d0af467027"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "61eca8560c7362d0af46702e"
+    },
+    "file": "2022-01/61eca8560c7362d0af46702d",
+    "name": "item2.jpg",
+    "size": 9508,
+    "type": "image/jpeg",
+    "createdAt": {
+      "$date": "2022-01-23T00:59:02.390Z"
+    },
+    "creator": {
+      "$oid": "5f24bd824d618d12d44b3bd5"
+    },
+    "owner": {
+      "$oid": "61eca8590c7362d0af46702f"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "61eca8750c7362d0af467031"
+    },
+    "file": "2022-01/61eca8750c7362d0af467030",
+    "name": "item5.jpg",
+    "size": 8769,
+    "type": "image/jpeg",
+    "createdAt": {
+      "$date": "2022-01-23T00:59:33.718Z"
+    },
+    "creator": {
+      "$oid": "5ebcbee6697a6c1b106d3fbe"
+    },
+    "owner": {
+      "$oid": "61eca8760c7362d0af467032"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "61eca87b0c7362d0af467034"
+    },
+    "file": "2022-01/61eca87b0c7362d0af467033",
+    "name": "item4.jpg",
+    "size": 8410,
+    "type": "image/jpeg",
+    "createdAt": {
+      "$date": "2022-01-23T00:59:39.755Z"
+    },
+    "creator": {
+      "$oid": "5ebcbee6697a6c1b106d3fbe"
+    },
+    "owner": {
+      "$oid": "61eca87c0c7362d0af467035"
+    }
+  }
+]

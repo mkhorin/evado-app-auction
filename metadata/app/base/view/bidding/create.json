@@ -1,0 +1,39 @@
+{
+  "label": "Creation view",
+  "readOnly": false,
+  "attrs": [
+    {
+      "name": "startDate",
+      "orderNumber": 30
+    },
+    {
+      "name": "endDate",
+      "orderNumber": 40
+    },
+    {
+      "name": "startingValue",
+      "orderNumber": 50
+    },
+    {
+      "name": "bidStep",
+      "orderNumber": 60
+    },
+    {
+      "name": "item",
+      "orderNumber": 70,
+      "rules": [
+        {
+          "type": "condition",
+          "orderNumber": 10,
+          "description": "Check that item creator matches the current user",
+          "condition": [
+            "$=",
+            ".item._creator",
+            "$user"
+          ],
+          "message": "You are not the creator of the item"
+        }
+      ]
+    }
+  ]
+}

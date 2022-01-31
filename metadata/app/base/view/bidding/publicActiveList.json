@@ -1,0 +1,43 @@
+{
+  "label": "Public active list",
+  "filter": [
+    "and",
+    {
+      "_state": "ready"
+    },
+    [
+      "<",
+      "startDate",
+      "$now"
+    ],
+    [
+      ">",
+      "endDate",
+      "$now"
+    ]
+  ],
+  "order": {
+    "_id": 1
+  },
+  "readOnly": true,
+  "attrs": [
+    {
+      "name": "item",
+      "eagerLoading": true,
+      "orderNumber": 30
+    },
+    {
+      "name": "startDate",
+      "orderNumber": 40
+    },
+    {
+      "name": "endDate",
+      "orderNumber": 50
+    },
+    {
+      "name": "lastBid",
+      "eagerLoading": true,
+      "orderNumber": 110
+    }
+  ]
+}

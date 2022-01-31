@@ -1,0 +1,122 @@
+[
+  {
+    "_id": {
+      "$oid": "61eca42e0c7362d0af467015"
+    },
+    "_class": "picture",
+    "_creator": {
+      "$oid": "5f24b7b54d618d12d44b3b9e"
+    },
+    "file": "2022-01/61eca42d0c7362d0af467013",
+    "_size": 9958,
+    "_type": "image/jpeg",
+    "_createdAt": {
+      "$date": "2022-01-23T00:41:18.924Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "61eca43b0c7362d0af467018"
+    },
+    "_class": "picture",
+    "_creator": {
+      "$oid": "5f24b7b54d618d12d44b3b9e"
+    },
+    "file": "2022-01/61eca43a0c7362d0af467016",
+    "_size": 6644,
+    "_type": "image/jpeg",
+    "_createdAt": {
+      "$date": "2022-01-23T00:41:31.959Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "61eca6ab0c7362d0af467021"
+    },
+    "_class": "picture",
+    "_creator": {
+      "$oid": "5f24bc814d618d12d44b3bc5"
+    },
+    "file": "2022-01/61eca6a90c7362d0af46701f",
+    "_size": 5704,
+    "_type": "image/jpeg",
+    "_createdAt": {
+      "$date": "2022-01-23T00:51:55.808Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "61eca6b40c7362d0af467024"
+    },
+    "_class": "picture",
+    "_creator": {
+      "$oid": "5f24bc814d618d12d44b3bc5"
+    },
+    "file": "2022-01/61eca6b20c7362d0af467022",
+    "_size": 5915,
+    "_type": "image/jpeg",
+    "_createdAt": {
+      "$date": "2022-01-23T00:52:04.023Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "61eca6c60c7362d0af467027"
+    },
+    "_class": "picture",
+    "_creator": {
+      "$oid": "5f24bc814d618d12d44b3bc5"
+    },
+    "file": "2022-01/61eca6c40c7362d0af467025",
+    "_size": 7387,
+    "_type": "image/jpeg",
+    "_createdAt": {
+      "$date": "2022-01-23T00:52:22.247Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "61eca8590c7362d0af46702f"
+    },
+    "_class": "picture",
+    "_creator": {
+      "$oid": "5f24bd824d618d12d44b3bd5"
+    },
+    "file": "2022-01/61eca8560c7362d0af46702d",
+    "_size": 9508,
+    "_type": "image/jpeg",
+    "_createdAt": {
+      "$date": "2022-01-23T00:59:05.832Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "61eca8760c7362d0af467032"
+    },
+    "_class": "picture",
+    "_creator": {
+      "$oid": "5ebcbee6697a6c1b106d3fbe"
+    },
+    "file": "2022-01/61eca8750c7362d0af467030",
+    "_size": 8769,
+    "_type": "image/jpeg",
+    "_createdAt": {
+      "$date": "2022-01-23T00:59:34.865Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "61eca87c0c7362d0af467035"
+    },
+    "_class": "picture",
+    "_creator": {
+      "$oid": "5ebcbee6697a6c1b106d3fbe"
+    },
+    "file": "2022-01/61eca87b0c7362d0af467033",
+    "_size": 8410,
+    "_type": "image/jpeg",
+    "_createdAt": {
+      "$date": "2022-01-23T00:59:40.376Z"
+    }
+  }
+]

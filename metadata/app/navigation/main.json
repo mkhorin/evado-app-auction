@@ -1,0 +1,27 @@
+{
+  "label": "Main",
+  "description": "Sidebar menu",
+  "nodes": [
+    {
+      "name": "myBids",
+      "label": "My bids",
+      "orderNumber": 10,
+      "class": "bid",
+      "view": "myBids"
+    },
+    {
+      "name": "myItems",
+      "label": "My items",
+      "orderNumber": 20,
+      "class": "item",
+      "view": "myItems"
+    },
+    {
+      "name": "myPictures",
+      "label": "My pictures",
+      "orderNumber": 30,
+      "class": "picture",
+      "view": "myPictures"
+    }
+  ]
+}

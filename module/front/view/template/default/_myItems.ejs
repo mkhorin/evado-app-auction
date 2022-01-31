@@ -1,0 +1,84 @@
+<template id="myItems">
+    <div class="page">
+
+        <breadcrumbs>
+            <template #path>
+                <li class="breadcrumb-item">
+                    <a @click.prevent="toMain" href="#" data-t="">Main</a>
+                </li>
+                <li class="breadcrumb-item" data-t="meta">Items</li>
+            </template>
+        </breadcrumbs>
+
+        <div class="d-flex justify-content-between align-items-center">
+            <h1 data-t="">My items</h1>
+            <div class="commands">
+                <button @click="onNew" type="button" class="btn btn-success mb-0">
+                    <span data-t="">New item</span>
+                </button>
+            </div>
+        </div>
+
+        <div class="loadable-container">
+            <table v-if="!empty" class="table align-middle">
+                <thead>
+                <tr>
+                    <th data-t="meta">Name</th>
+                    <th data-t="meta">Picture</th>
+                    <th></th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr v-for="item of items" :key="item.id">
+                    <td>
+                        <a @click.prevent="onMyItem(item.id)" href="#">{{item.name}}</a>
+                    </td>
+                    <td>
+                        <img v-if="item.picture" :src="item.picture" class="img-thumbnail img-fluid" alt="">
+                    </td>
+                    <td class="text-end">
+                        <button @click="onEdit(item)" class="btn-outline-primary btn" type="button">
+                            <i class="fas fa-pencil-alt"></i>
+                        </button>
+                        <button @click="onDelete(item)" class="btn-outline-danger btn" type="button">
+                            <i class="far fa-trash-alt"></i>
+                        </button>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+
+            <pagination @change="load"></pagination>
+
+            <div v-show="!loading && empty" class="alert-warning alert">
+                <span data-t="">No items found</span>
+            </div>
+
+            <div v-show="loading" class="loader">
+                <i class="fa fa-spinner fa-spin"></i>
+            </div>
+
+            <modal-dialog ref="newModal" title="New item" size="lg">
+                <template #body>
+                    <item-form ref="newForm"></item-form>
+                </template>
+                <template #footer>
+                    <button @click="onCreate" class="btn-success btn">
+                        <span data-t="">Create</span>
+                    </button>
+                </template>
+            </modal-dialog>
+
+            <modal-dialog ref="editModal" title="Edit item" size="lg">
+                <template #body>
+                    <item-form ref="editForm" :id="formId"></item-form>
+                </template>
+                <template #footer>
+                    <button @click="onSave" class="btn-primary btn">
+                        <span data-t="">Save</span>
+                    </button>
+                </template>
+            </modal-dialog>
+        </div>
+    </div>
+</template>

@@ -7,7 +7,7 @@ module.exports = {
 
     components: {
         'logger': {
-            level: 'trace'
+            level: 'debug'
         }
     }
 };

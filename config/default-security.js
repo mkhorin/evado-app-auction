@@ -12,6 +12,45 @@ module.exports = {
         targets: {
             type: 'all'
         }
+    }, {
+        description: 'Guests can read data',
+        roles: ['guest', 'user'],
+        type: 'allow',
+        actions: 'read',
+        targets: [{
+            type: 'class',
+            class: ['bid', 'item', 'member', 'picture']
+        }, {
+            type: 'view',
+            class: 'bidding',
+            view: ['publicActiveList', 'publicReadyView']
+        }]
+    }, {
+        description: 'Users can manage their own objects',
+        roles: 'user',
+        type: 'allow',
+        actions: ['read', 'update', 'delete'],
+        targets: [{
+            type: 'class',
+            class: ['bidding', 'item', 'picture']
+        }, {
+            type: 'transition',
+            class: 'bidding'
+        }],
+        rules: 'creator'
+    }, {
+        description: 'Users can create',
+        roles: 'user',
+        type: 'allow',
+        actions: 'create',
+        targets: [{
+            type: 'class',
+            class: ['bidding', 'item', 'picture']
+        }, {
+            type: 'view',
+            class: 'bid',
+            view: 'publicCreation'
+        }]
     }],
 
     permissions: {

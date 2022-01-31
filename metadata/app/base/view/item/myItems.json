@@ -1,0 +1,19 @@
+{
+  "label": "My items",
+  "description": "Public my items",
+  "filter": {
+    "owner": "$user.meta.base.member"
+  },
+  "readOnly": true,
+  "attrs": [
+    {
+      "name": "name",
+      "orderNumber": 10
+    },
+    {
+      "name": "pictures",
+      "orderNumber": 30,
+      "viewType": "thumbnail"
+    }
+  ]
+}

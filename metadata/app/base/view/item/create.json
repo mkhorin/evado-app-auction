@@ -1,0 +1,27 @@
+{
+  "label": "Creation view",
+  "description": "Creation view",
+  "readOnly": false,
+  "attrs": [
+    {
+      "name": "name",
+      "orderNumber": 10
+    },
+    {
+      "name": "description",
+      "group": null,
+      "orderNumber": 20
+    },
+    {
+      "name": "pictures",
+      "group": null,
+      "orderNumber": 30
+    },
+    {
+      "name": "owner",
+      "group": null,
+      "hidden": true,
+      "orderNumber": 40
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+<template id="myItem">
+    <div class="page">
+
+        <breadcrumbs>
+            <template #path>
+                <li class="breadcrumb-item">
+                    <a @click.prevent="toMain" href="#" data-t="">Main</a>
+                </li>
+                <li class="breadcrumb-item">
+                    <a @click.prevent="toMyItems" href="#" data-t="">My items</a>
+                </li>
+                <li class="breadcrumb-item" data-t="">Item</li>
+            </template>
+        </breadcrumbs>
+
+        <div class="loadable-container">
+            <template v-if="!loading && id">
+
+                <h1>{{name}}</h1>
+
+                <div class="item-description mb-4" v-html="description"></div>
+
+                <div v-if="pictures.length" class="item-pictures mb-4">
+                    <img v-for="picture of pictures" :src="picture"
+                         class="mx-auto thumbnail-transparent thumbnail-sm img-thumbnail img-fluid" alt="">
+                </div>
+
+                <biddings :item="item"></biddings>
+            </template>
+
+            <div v-if="loading" class="loader">
+                <i class="fa fa-spinner fa-spin"></i>
+            </div>
+        </div>
+    </div>
+</template>

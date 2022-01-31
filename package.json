@@ -1,7 +1,7 @@
 {
-  "name": "evado-app-boilerplate",
-  "version": "4.1.1",
-  "description": "Boilerplate App built on Evado Declarative Framework",
+  "name": "evado-app-auction",
+  "version": "1.0.0",
+  "description": "Auction Web App built on Evado Declarative Framework",
   "author": "Maxim Khorin",
   "license": "MIT",
   "engines": {
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/mkhorin/evado-app-boilerplate.git"
+    "url": "https://github.com/mkhorin/evado-app-auction.git"
   },
   "dependencies": {
     "evado": "~5.1.0",

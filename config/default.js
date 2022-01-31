@@ -2,31 +2,25 @@
 
 module.exports = {
 
-    title: 'Boilerplate',
+    title: 'Auction',
 
     components: {
         'db': {
             settings: {
-                'database': process.env.MONGO_NAME || 'evado-boilerplate',
+                'database': process.env.MONGO_NAME || 'evado-auction',
             }
         },
         'cookie': {
-            secret: 'boilerplate.evado.sign' // key to sign cookie
+            secret: 'auction.evado.sign' // key to sign cookie
         },
         'session': {
-            secret: 'boilerplate.evado.sign'  // key to sign session ID cookie
+            secret: 'auction.evado.sign'  // key to sign session ID cookie
         },
         'i18n': {
             language: 'en'
         },
         'router': {
             // defaultModule: 'office'
-        },
-        's3Storage': {
-            Class: require('evado/component/file/S3Storage'),
-            accessKey: 'minioadmin',
-            secretKey: 'minioadmin',
-            bucket: 'test'
         }
     },
     metaModels: {
@@ -54,16 +48,18 @@ module.exports = {
             Class: require('evado-module-studio/Module')
         },
         'office': {
-            Class: require('../module/office/Module')
+            Class: require('evado-module-office/Module')
         },
         'account': {
             Class: require('evado-module-account/Module')
         },
         'admin': {
             Class: require('evado-module-admin/Module')
+        },
+        'front': {
+            Class: require('../module/front/Module')
         }
     },
-    assets: require('./default-assets'),
     users: require('./default-users'),
     userFilters: require('./default-userFilters'),
     security: require('./default-security'),
@@ -76,8 +72,8 @@ module.exports = {
     params: {
         'enablePasswordChange': true,
         'enablePasswordReset': false,
-        'enableSignUp': false,
+        'enableSignUp': true,
         'enableSignUpVerification': false,
-        'languageToggle': false
+        'languageToggle': true
     }
 };

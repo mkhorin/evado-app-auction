@@ -1,0 +1,19 @@
+{
+  "label": "Public creation",
+  "description": "Public creation",
+  "readOnly": false,
+  "attrs": [
+    {
+      "name": "value",
+      "orderNumber": 10
+    },
+    {
+      "name": "creator",
+      "orderNumber": 20
+    },
+    {
+      "name": "bidding",
+      "orderNumber": 40
+    }
+  ]
+}

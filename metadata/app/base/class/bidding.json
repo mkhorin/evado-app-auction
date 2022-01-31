@@ -1,0 +1,363 @@
+{
+  "abstract": false,
+  "description": "Auction session of one item",
+  "label": "Bidding",
+  "attrs": [
+    {
+      "name": "_state",
+      "label": "State",
+      "type": "string",
+      "viewType": "state",
+      "description": "Service attribute",
+      "commonSearchable": false,
+      "createOnRead": false,
+      "eagerLoading": false,
+      "escape": true,
+      "hidden": false,
+      "hideEmpty": false,
+      "history": false,
+      "multiple": false,
+      "orderNumber": 10,
+      "sortable": false,
+      "sortableRelation": false,
+      "readOnly": true,
+      "required": false,
+      "selectSearchable": false,
+      "signed": false,
+      "trim": true,
+      "unique": false
+    },
+    {
+      "name": "active",
+      "label": "Active",
+      "type": "calc",
+      "viewType": "boolean",
+      "description": "Active bidding",
+      "commonSearchable": false,
+      "createOnRead": false,
+      "eagerLoading": false,
+      "escape": true,
+      "expression": [
+        "$and",
+        [
+          "$=",
+          "._state",
+          "ready"
+        ],
+        [
+          "$<",
+          ".startDate",
+          "$now"
+        ],
+        [
+          "$>",
+          ".endDate",
+          "$now"
+        ]
+      ],
+      "hidden": false,
+      "hideEmpty": false,
+      "history": false,
+      "multiple": false,
+      "orderNumber": 20,
+      "sortable": false,
+      "sortableRelation": false,
+      "readOnly": false,
+      "required": false,
+      "selectSearchable": false,
+      "signed": false,
+      "trim": true,
+      "unique": false
+    },
+    {
+      "name": "item",
+      "label": "Item",
+      "type": "ref",
+      "viewType": "relationSelect",
+      "commands": [
+        "edit"
+      ],
+      "commonSearchable": false,
+      "createOnRead": false,
+      "eagerLoading": false,
+      "escape": true,
+      "hidden": false,
+      "hideEmpty": false,
+      "history": false,
+      "multiple": false,
+      "onDelete": "cascade",
+      "orderNumber": 30,
+      "sortable": false,
+      "sortableRelation": false,
+      "refClass": "item",
+      "readOnly": true,
+      "required": true,
+      "selectSearchable": false,
+      "signed": false,
+      "trim": true,
+      "unique": false
+    },
+    {
+      "name": "startDate",
+      "label": "Start date",
+      "type": "date",
+      "viewType": "localDatetime",
+      "commonSearchable": false,
+      "createOnRead": false,
+      "eagerLoading": false,
+      "escape": true,
+      "hidden": false,
+      "hideEmpty": false,
+      "history": false,
+      "indexing": 1,
+      "multiple": false,
+      "orderNumber": 40,
+      "sortable": false,
+      "sortableRelation": false,
+      "readOnly": false,
+      "required": true,
+      "selectSearchable": false,
+      "signed": false,
+      "trim": true,
+      "unique": false,
+      "rules": [
+        {
+          "type": "custom",
+          "orderNumber": 10,
+          "description": "Check other bidding to overlap dates",
+          "config": {
+            "Class": "component/meta/validator/DateOverlap"
+          }
+        }
+      ]
+    },
+    {
+      "name": "endDate",
+      "label": "End date",
+      "type": "date",
+      "viewType": "localDatetime",
+      "commonSearchable": false,
+      "createOnRead": false,
+      "eagerLoading": false,
+      "escape": true,
+      "hidden": false,
+      "hideEmpty": false,
+      "history": false,
+      "indexing": 1,
+      "multiple": false,
+      "orderNumber": 50,
+      "sortable": false,
+      "sortableRelation": false,
+      "readOnly": false,
+      "required": true,
+      "selectSearchable": false,
+      "signed": false,
+      "trim": true,
+      "unique": false,
+      "rules": [
+        {
+          "type": "condition",
+          "orderNumber": 10,
+          "description": "End date must be greater than start date",
+          "message": "End date must be greater than start date",
+          "condition": [
+            "$>",
+            ".endDate",
+            ".startDate"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "startingValue",
+      "label": "Starting value",
+      "type": "float",
+      "description": "Starting bid value",
+      "commonSearchable": false,
+      "createOnRead": false,
+      "defaultValue": 0,
+      "eagerLoading": false,
+      "escape": true,
+      "hidden": false,
+      "hideEmpty": false,
+      "history": false,
+      "multiple": false,
+      "orderNumber": 60,
+      "sortable": false,
+      "sortableRelation": false,
+      "readOnly": false,
+      "required": true,
+      "selectSearchable": false,
+      "signed": false,
+      "trim": true,
+      "unique": false,
+      "rules": [
+        {
+          "type": "number",
+          "orderNumber": 10,
+          "description": "Check minimum price",
+          "integerOnly": false,
+          "min": 0
+        }
+      ]
+    },
+    {
+      "name": "bidStep",
+      "label": "Bid step",
+      "type": "float",
+      "description": "Bid change step",
+      "commonSearchable": false,
+      "createOnRead": false,
+      "defaultValue": 1,
+      "extHint": "Bid change step",
+      "eagerLoading": false,
+      "escape": true,
+      "hidden": false,
+      "hideEmpty": false,
+      "history": false,
+      "multiple": false,
+      "orderNumber": 70,
+      "sortable": false,
+      "sortableRelation": false,
+      "readOnly": false,
+      "required": true,
+      "selectSearchable": false,
+      "signed": false,
+      "trim": true,
+      "unique": false,
+      "rules": [
+        {
+          "type": "number",
+          "orderNumber": 10,
+          "description": "Check minimum value",
+          "integerOnly": false,
+          "min": 0.01
+        }
+      ]
+    },
+    {
+      "name": "nextValue",
+      "label": "Next value",
+      "type": "calc",
+      "description": "Next bid value",
+      "commonSearchable": false,
+      "createOnRead": false,
+      "extHint": "Minimum value of the next bid",
+      "eagerLoading": false,
+      "escape": true,
+      "expression": {
+        "Class": "component/meta/calc/NextBidValue"
+      },
+      "hidden": false,
+      "hideEmpty": false,
+      "history": false,
+      "multiple": false,
+      "orderNumber": 90,
+      "sortable": false,
+      "sortableRelation": false,
+      "readOnly": false,
+      "required": false,
+      "selectSearchable": false,
+      "signed": false,
+      "trim": true,
+      "unique": false
+    },
+    {
+      "name": "bids",
+      "label": "Bids",
+      "type": "backref",
+      "commands": [
+        "create",
+        "edit",
+        "delete"
+      ],
+      "commonSearchable": false,
+      "createOnRead": true,
+      "eagerLoading": false,
+      "escape": true,
+      "hidden": false,
+      "hideEmpty": false,
+      "history": false,
+      "multiple": true,
+      "orderNumber": 100,
+      "sortable": false,
+      "sortableRelation": false,
+      "refAttr": "bidding",
+      "refClass": "bid",
+      "readOnly": false,
+      "required": false,
+      "selectSearchable": false,
+      "signed": false,
+      "trim": true,
+      "unique": false
+    },
+    {
+      "name": "lastBid",
+      "label": "Last bid",
+      "type": "backref",
+      "description": "Last bid",
+      "commands": [
+        "edit"
+      ],
+      "commonSearchable": false,
+      "createOnRead": false,
+      "eagerLoading": false,
+      "escape": true,
+      "hidden": false,
+      "hideEmpty": false,
+      "history": false,
+      "multiple": false,
+      "orderNumber": 110,
+      "sortable": false,
+      "sortableRelation": false,
+      "refAttr": "bidding",
+      "refClass": "bid",
+      "readOnly": true,
+      "required": false,
+      "selectSearchable": false,
+      "signed": false,
+      "trim": true,
+      "unique": false
+    }
+  ],
+  "states": [
+    {
+      "name": "draft",
+      "label": "Draft",
+      "defaults": true,
+      "description": "State for changing bidding",
+      "readOnly": false
+    },
+    {
+      "name": "ready",
+      "label": "Ready",
+      "defaults": false,
+      "description": "Bidding is ready for action",
+      "readOnly": true
+    }
+  ],
+  "transitions": [
+    {
+      "name": "start",
+      "label": "Start bidding",
+      "hint": "Start bidding within the specified period",
+      "nullStartState": false,
+      "startStates": [
+        "draft"
+      ],
+      "finalState": "ready",
+      "orderNumber": 10
+    },
+    {
+      "name": "stop",
+      "label": "Stop bidding",
+      "hint": "Return bidding to editing",
+      "nullStartState": false,
+      "startStates": [
+        "ready"
+      ],
+      "finalState": "draft",
+      "orderNumber": 20
+    }
+  ]
+}

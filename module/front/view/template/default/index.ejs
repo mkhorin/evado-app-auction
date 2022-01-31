@@ -1,0 +1,66 @@
+<%
+layout(_view.get('_layout/content'));
+
+script('front/vendor/markdown/markdown.js');
+script('front/vendor/vue/vue.js');
+
+script('front/script/modelForm.js');
+script('front/script/bidForm.js');
+script('front/script/biddingForm.js');
+script('front/script/itemForm.js');
+
+script('front/script/auction.js');
+script('front/script/auctions.js');
+script('front/script/bidding.js');
+script('front/script/biddings.js');
+script('front/script/bids.js');
+script('front/script/breadcrumbs.js');
+script('front/script/mixin.js');
+script('front/script/modalDialog.js');
+script('front/script/modelFormAttr.js');
+script('front/script/modelFormDate.js');
+script('front/script/modelFormFile.js');
+script('front/script/modelFormFileItem.js');
+script('front/script/modelFormString.js');
+script('front/script/modelFormText.js');
+script('front/script/myBids.js');
+script('front/script/myItem.js');
+script('front/script/myItems.js');
+script('front/script/pagination.js');
+
+script('front/script/front.js');
+
+const user = _controller.user;
+%>
+
+<%- include('./_auction') %>
+<%- include('./_auctions') %>
+<%- include('./_bidding') %>
+<%- include('./_biddings') %>
+<%- include('./_bids') %>
+<%- include('./_breadcrumbs') %>
+<%- include('./_modalDialog') %>
+<%- include('./_modelForm') %>
+<%- include('./_modelFormDate') %>
+<%- include('./_modelFormFile') %>
+<%- include('./_modelFormFileItem') %>
+<%- include('./_modelFormString') %>
+<%- include('./_modelFormText') %>
+<%- include('./_myBids') %>
+<%- include('./_myItem') %>
+<%- include('./_myItems') %>
+<%- include('./_pagination') %>
+
+<%- include(_view.get('_part/signboard')) %>
+
+<div id="front"
+     data-user-id="<%- user.getId() %>"
+     data-auth-url="<%- _url('/auth/sign-in?returnUrl=/front') %>"
+     data-data-url="<%- _url('/api/base/data') %>"
+     data-file-url="<%- _url('/api/base/file') %>"
+     data-meta-url="<%- _url('/api/base/meta') %>"
+     data-thumbnail-url="<%- _url('/api/base/file/thumbnail') %>"
+     data-csrf="<%- _controller.getCsrfToken() %>">
+
+    <componen :is="activePage" v-bind="activePageProps"></componen>
+</div>

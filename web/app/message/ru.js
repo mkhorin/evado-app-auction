@@ -1,43 +1,75 @@
 'use strict';
 /**
  * Extend default translations
- *
- * Use: Jam.t('Some text')
- * Use: <span data-t="">Some text</span>
- * Use: <div title="Some text" data-t=""></div>
- * Use: <input placeholder="Some text" type="text" data-t="">
  */
 Object.assign(Jam.I18n.defaults, {
 
+    'Dates overlap with other bidding': 'Даты пересекаются с другими торгами',
+
+    'End date must be greater than start date': 'Дата окончания должны быть больше даты начала',
+
+    'This bidding is inactive': 'Эти торги не активны',
+
+    'Value must be greater than or equal to {value}': 'Значение должно быть больше или равно {value}',
+
+    'You cannot bid for your item': 'Вы не можете делать ставки за свой товар'
 });
 
-/**
- * Define custom translation category
- *
- * Use: Jam.t('Some text', 'custom')
- * Use: <span data-t="custom">Some text</span>
- * Use: <div title="Some text" data-t="custom"></div>
- * Use: <input placeholder="Some text" type="text" data-t="custom">
- * Use: <div title="Some text" data-t-title="custom" data-t="">Text</div>
- */
-Jam.I18n.custom = {
-
-    'Some text': 'Некоторый текст'
-};
-
-/**
- * Metadata translation category
- *
- * meta - all metadata
- * meta.class.className - class metadata
- * meta.class.className.view.viewName - class view metadata
- */
 Jam.I18n.meta = {
 
-};
-Jam.I18n['meta.class.className'] = {
+    'Active': 'Активно',
 
-};
-Jam.I18n['meta.class.className.view.viewName'] = {
+    'Bid': 'Ставка',
+    'Bid change step': 'Шаг изменения ставки',
+    'Bid step': 'Шаг ставки',
+    'Bids': 'Ставки',
+    'Bidding': 'Торги',
+    'Biddings': 'Торги',
 
+    'Created at': 'Создано',
+    'Creator': 'Создатель',
+
+    'Description': 'Описание',
+    'Draft': 'Черновик',
+
+    'End date': 'Дата окончания',
+
+    'Info': 'Информация',
+    'Item': 'Товар',
+    'Items': 'Товары',
+
+    'Last bid': 'Последняя ставка',
+
+    'Member': 'Участник',
+    'Members': 'Участники',
+    'Minimum value of the next bid': 'Минимальное значение следующей ставки',
+
+    'Name': 'Название',
+    'Next value': 'Следующая ставка',
+
+    'Owner': 'Владелец',
+
+    'Picture': 'Изображение',
+    'Pictures': 'Изображения',
+
+    'Ready': 'Готово',
+    'Return bidding to editing': 'Вернуть торги на редактирование',
+
+    'Start bidding': 'Начать торги',
+    'Start bidding within the specified period': 'Начать торги в указанный период',
+    'Start date': 'Дата начала',
+    'Starting value': 'Начальная ставка',
+    'State': 'Состояние',
+    'Stop bidding': 'Остановить торги',
+
+    'User': 'Пользователь',
+
+    'Value': 'Значение'
+};
+/**
+ * Переопределит перевод из общей категории метаданных
+ */
+Jam.I18n['meta.class.member'] = {
+
+    'Name': 'Имя'
 };

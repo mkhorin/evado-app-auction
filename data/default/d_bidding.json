@@ -1,0 +1,156 @@
+[
+  {
+    "_id": {
+      "$oid": "61eca57b0c7362d0af46701b"
+    },
+    "_state": "draft",
+    "_class": "bidding",
+    "_creator": {
+      "$oid": "5f24b7b54d618d12d44b3b9e"
+    },
+    "startingValue": 50,
+    "bidStep": 1,
+    "item": {
+      "$oid": "61eca51f0c7362d0af46701a"
+    },
+    "startDate": {
+      "$date": "2022-01-01T00:00:00.000Z"
+    },
+    "endDate": {
+      "$date": "2022-01-20T00:00:00.000Z"
+    },
+    "_createdAt": {
+      "$date": "2022-01-23T00:46:51.593Z"
+    },
+    "_editor": {
+      "$oid": "5f24b7b54d618d12d44b3b9e"
+    },
+    "_updatedAt": {
+      "$date": "2022-01-23T00:47:30.643Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "61eca6110c7362d0af46701c"
+    },
+    "_state": "ready",
+    "_class": "bidding",
+    "_creator": {
+      "$oid": "5f24b7b54d618d12d44b3b9e"
+    },
+    "startingValue": 1000,
+    "bidStep": 100,
+    "item": {
+      "$oid": "61eca48a0c7362d0af467019"
+    },
+    "startDate": {
+      "$date": "2022-01-01T00:00:00.000Z"
+    },
+    "endDate": {
+      "$date": "2042-01-01T00:00:00.000Z"
+    },
+    "_createdAt": {
+      "$date": "2022-01-23T00:49:21.499Z"
+    },
+    "_editor": {
+      "$oid": "5f24b7b54d618d12d44b3b9e"
+    },
+    "_updatedAt": {
+      "$date": "2022-01-23T00:49:33.863Z"
+    },
+    "_transiting": null
+  },
+  {
+    "_id": {
+      "$oid": "61eca7dd0c7362d0af46702a"
+    },
+    "_state": "ready",
+    "_class": "bidding",
+    "_creator": {
+      "$oid": "5f24bc814d618d12d44b3bc5"
+    },
+    "startingValue": 55,
+    "bidStep": 5,
+    "item": {
+      "$oid": "61eca6fe0c7362d0af467028"
+    },
+    "startDate": {
+      "$date": "2022-01-10T00:00:00.000Z"
+    },
+    "endDate": {
+      "$date": "2035-08-10T00:00:00.000Z"
+    },
+    "_createdAt": {
+      "$date": "2022-01-23T00:57:01.082Z"
+    },
+    "_editor": {
+      "$oid": "5f24bc814d618d12d44b3bc5"
+    },
+    "_updatedAt": {
+      "$date": "2022-01-23T00:57:15.531Z"
+    },
+    "_transiting": null
+  },
+  {
+    "_id": {
+      "$oid": "61eca8f80c7362d0af467037"
+    },
+    "_state": "ready",
+    "_class": "bidding",
+    "_creator": {
+      "$oid": "5ebcbee6697a6c1b106d3fbe"
+    },
+    "startingValue": 70,
+    "bidStep": 10,
+    "item": {
+      "$oid": "61eca8ba0c7362d0af467036"
+    },
+    "startDate": {
+      "$date": "2022-01-20T01:00:00.000Z"
+    },
+    "endDate": {
+      "$date": "2035-09-20T01:00:00.000Z"
+    },
+    "_createdAt": {
+      "$date": "2022-01-23T01:01:44.323Z"
+    },
+    "_editor": {
+      "$oid": "5ebcbee6697a6c1b106d3fbe"
+    },
+    "_updatedAt": {
+      "$date": "2022-01-23T01:01:55.488Z"
+    },
+    "_transiting": null
+  },
+  {
+    "_id": {
+      "$oid": "61eca9fc0c7362d0af467039"
+    },
+    "_state": "ready",
+    "_class": "bidding",
+    "_creator": {
+      "$oid": "5f24bd824d618d12d44b3bd5"
+    },
+    "startingValue": 0,
+    "bidStep": 10,
+    "item": {
+      "$oid": "61eca9a10c7362d0af467038"
+    },
+    "startDate": {
+      "$date": "2022-01-10T07:30:00.000Z"
+    },
+    "endDate": {
+      "$date": "2042-10-15T01:04:30.000Z"
+    },
+    "_createdAt": {
+      "$date": "2022-01-23T01:06:04.756Z"
+    },
+    "_transiting": null,
+    "_updatedAt": {
+      "$date": "2022-01-23T01:06:10.042Z"
+    },
+    "_editor": {
+      "$oid": "5f24bd824d618d12d44b3bd5"
+    }
+  }
+]

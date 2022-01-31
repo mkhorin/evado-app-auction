@@ -1,0 +1,33 @@
+{
+  "label": "Public list",
+  "filter": {
+    "_creator": "$user"
+  },
+  "order": {
+    "_id": -1
+  },
+  "readOnly": true,
+  "attrs": [
+    {
+      "name": "active",
+      "orderNumber": 10
+    },
+    {
+      "name": "_state",
+      "orderNumber": 20
+    },
+    {
+      "name": "item",
+      "eagerLoading": true,
+      "orderNumber": 30
+    },
+    {
+      "name": "startDate",
+      "orderNumber": 40
+    },
+    {
+      "name": "endDate",
+      "orderNumber": 50
+    }
+  ]
+}

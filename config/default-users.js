@@ -1,8 +1,27 @@
 'use strict';
 
 module.exports = [{
+    _id: '5ebcbee6697a6c1b106d3fbe',
     name: 'Adam',
     email: 'a@a.a',
-    passwordHash: '58ada0ad16a2ee176dd5d5e6563dd7210936316f29541955e2a8f9b546ddd9a9e336102e',
+    password: '123456',
+    verified: true
+}, {
+    _id: '5f24b7b54d618d12d44b3b9e',
+    name: 'Bart',
+    email: 'b@b.b',
+    password: '123456',
+    verified: true
+}, {
+    _id: '5f24bc814d618d12d44b3bc5',
+    name: 'Sarah',
+    email: 's@s.s',
+    password: '123456',
+    verified: true
+}, {
+    _id: '5f24bd824d618d12d44b3bd5',
+    name: 'Tim',
+    email: 't@t.t',
+    password: '123456',
     verified: true
 }];

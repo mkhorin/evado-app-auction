@@ -1,0 +1,20 @@
+{
+  "label": "Public list",
+  "description": "Public list",
+  "readOnly": true,
+  "attrs": [
+    {
+      "name": "value",
+      "orderNumber": 10
+    },
+    {
+      "name": "creator",
+      "eagerLoading": true,
+      "orderNumber": 20
+    },
+    {
+      "name": "_createdAt",
+      "orderNumber": 30
+    }
+  ]
+}

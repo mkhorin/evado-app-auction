@@ -1,0 +1,49 @@
+<template id="bids">
+    <div class="loadable-container">
+
+        <div class="d-flex justify-content-between mt-5 mb-3">
+            <h3 data-t="meta">{{title}}</h3>
+            <div v-if="creation" class="commands">
+                <button @click="onNew" type="button" class="btn btn-success mb-0">
+                    <span data-t="">Make a bid</span>
+                </button>
+            </div>
+        </div>
+
+        <table v-if="!empty" class="table-bordered table bg-white">
+            <thead>
+            <tr>
+                <th data-t="">Value</th>
+                <th data-t="">Created at</th>
+                <th data-t="">Creator</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr v-for="item of items">
+                <td class="bid-value">{{item.value | currency}}</td>
+                <td class="bid-date">{{item.date | datetime}}</td>
+                <td class="bid-creator">{{item.creator}}</td>
+            </tr>
+            </tbody>
+        </table>
+
+        <pagination @change="load"></pagination>
+
+        <div v-show="!loading && empty" class="alert-warning alert">
+            <span data-t="">There are no bids yet</span>
+        </div>
+
+        <div v-show="loading" class="loader">
+            <i class="fa fa-spinner fa-spin"></i>
+        </div>
+
+        <modal-dialog ref="newModal" title="New bid" size="lg">
+            <template #body>
+                <bid-form ref="newForm" :next-value="nextValue"></bid-form>
+            </template>
+            <template #footer>
+                <button @click="onCreate" class="btn-success btn" data-t="">Create</button>
+            </template>
+        </modal-dialog>
+    </div>
+</template>

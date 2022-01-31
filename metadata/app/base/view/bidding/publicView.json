@@ -1,0 +1,34 @@
+{
+  "label": "Public view",
+  "description": "Public view",
+  "filter": {
+    "_creator": "$user"
+  },
+  "readOnly": true,
+  "attrs": [
+    {
+      "name": "active",
+      "orderNumber": 10
+    },
+    {
+      "name": "_state",
+      "orderNumber": 20
+    },
+    {
+      "name": "startDate",
+      "orderNumber": 40
+    },
+    {
+      "name": "endDate",
+      "orderNumber": 50
+    },
+    {
+      "name": "startingValue",
+      "orderNumber": 60
+    },
+    {
+      "name": "bidStep",
+      "orderNumber": 70
+    }
+  ]
+}

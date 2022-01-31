@@ -1,0 +1,159 @@
+{
+  "abstract": false,
+  "description": "Member bid",
+  "label": "Bid",
+  "order": {
+    "_id": -1
+  },
+  "attrs": [
+    {
+      "name": "value",
+      "label": "Value",
+      "type": "float",
+      "description": "Bid value",
+      "commonSearchable": false,
+      "createOnRead": false,
+      "eagerLoading": false,
+      "escape": true,
+      "hidden": false,
+      "hideEmpty": false,
+      "history": false,
+      "multiple": false,
+      "orderNumber": 10,
+      "sortable": false,
+      "sortableRelation": false,
+      "readOnly": false,
+      "required": true,
+      "selectSearchable": false,
+      "signed": false,
+      "trim": true,
+      "unique": false,
+      "rules": [
+        {
+          "type": "number",
+          "orderNumber": 10,
+          "description": "Check minimum and maximum value",
+          "integerOnly": false,
+          "max": 1000000,
+          "min": 0.01
+        },
+        {
+          "type": "custom",
+          "orderNumber": 20,
+          "description": "Check minimum bid value",
+          "config": {
+            "Class": "component/meta/validator/BidValue"
+          }
+        }
+      ]
+    },
+    {
+      "name": "creator",
+      "label": "Creator",
+      "type": "ref",
+      "viewType": "relationSelect",
+      "description": "Bid creator",
+      "commands": [
+        "edit"
+      ],
+      "commonSearchable": false,
+      "createOnRead": false,
+      "defaultValue": "$user.meta.base.member",
+      "eagerLoading": false,
+      "escape": true,
+      "hidden": false,
+      "hideEmpty": false,
+      "history": false,
+      "multiple": false,
+      "onDelete": "cascade",
+      "orderNumber": 20,
+      "sortable": false,
+      "sortableRelation": false,
+      "refClass": "member",
+      "readOnly": true,
+      "required": true,
+      "selectSearchable": false,
+      "signed": false,
+      "trim": true,
+      "unique": false,
+      "rules": [
+        {
+          "type": "condition",
+          "orderNumber": 10,
+          "description": "Check that user is not creator of the item",
+          "condition": [
+            "$!=",
+            ".bidding.item._creator",
+            "$user"
+          ],
+          "message": "You cannot bid for your item"
+        }
+      ]
+    },
+    {
+      "name": "_createdAt",
+      "label": "Created at",
+      "type": "date",
+      "viewType": "localDatetime",
+      "description": "Creation date",
+      "commonSearchable": false,
+      "createOnRead": false,
+      "eagerLoading": false,
+      "escape": true,
+      "hidden": false,
+      "hideEmpty": false,
+      "history": false,
+      "multiple": false,
+      "orderNumber": 30,
+      "sortable": false,
+      "sortableRelation": false,
+      "readOnly": true,
+      "required": false,
+      "selectSearchable": false,
+      "signed": false,
+      "trim": true,
+      "unique": false
+    },
+    {
+      "name": "bidding",
+      "label": "Bidding",
+      "type": "ref",
+      "viewType": "relationSelect",
+      "commands": [
+        "edit"
+      ],
+      "commonSearchable": false,
+      "createOnRead": false,
+      "eagerLoading": false,
+      "escape": true,
+      "hidden": false,
+      "hideEmpty": false,
+      "history": false,
+      "multiple": false,
+      "onDelete": "cascade",
+      "orderNumber": 40,
+      "sortable": false,
+      "sortableRelation": false,
+      "refClass": "bidding",
+      "readOnly": true,
+      "required": true,
+      "selectSearchable": false,
+      "signed": false,
+      "trim": true,
+      "unique": false,
+      "rules": [
+        {
+          "type": "condition",
+          "orderNumber": 10,
+          "description": "Check that the bidding is active",
+          "condition": [
+            "$=",
+            ".bidding.active",
+            true
+          ],
+          "message": "This bidding is inactive"
+        }
+      ]
+    }
+  ]
+}

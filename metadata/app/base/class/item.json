@@ -1,0 +1,203 @@
+{
+  "abstract": false,
+  "description": "An item sold at auction",
+  "header": ".name",
+  "label": "Item",
+  "attrs": [
+    {
+      "name": "name",
+      "label": "Name",
+      "type": "string",
+      "commonSearchable": false,
+      "createOnRead": false,
+      "eagerLoading": false,
+      "escape": true,
+      "hidden": false,
+      "hideEmpty": false,
+      "history": false,
+      "multiple": false,
+      "orderNumber": 10,
+      "sortable": false,
+      "sortableRelation": false,
+      "readOnly": false,
+      "required": true,
+      "selectSearchable": false,
+      "signed": false,
+      "trim": true,
+      "unique": false,
+      "rules": [
+        {
+          "type": "unique",
+          "orderNumber": 10,
+          "description": "Check name uniqueness among user's items",
+          "filter": "owner",
+          "ignoreCase": true
+        }
+      ]
+    },
+    {
+      "name": "description",
+      "label": "Description",
+      "type": "text",
+      "commonSearchable": false,
+      "createOnRead": false,
+      "eagerLoading": false,
+      "escape": true,
+      "group": "info",
+      "hidden": false,
+      "hideEmpty": false,
+      "history": false,
+      "multiple": false,
+      "options": {
+        "rows": 8
+      },
+      "orderNumber": 20,
+      "sortable": false,
+      "sortableRelation": false,
+      "readOnly": false,
+      "required": false,
+      "selectSearchable": false,
+      "signed": false,
+      "trim": true,
+      "unique": false
+    },
+    {
+      "name": "pictures",
+      "label": "Pictures",
+      "type": "ref",
+      "commands": [
+        "add",
+        "remove",
+        "create",
+        "edit"
+      ],
+      "commonSearchable": false,
+      "createOnRead": false,
+      "eagerLoading": false,
+      "escape": true,
+      "group": "pictures",
+      "hidden": false,
+      "hideEmpty": false,
+      "history": false,
+      "multiple": true,
+      "onDelete": "null",
+      "options": {
+        "format": {
+          "separator": ""
+        }
+      },
+      "orderNumber": 30,
+      "sortable": false,
+      "sortableRelation": false,
+      "refClass": "picture",
+      "readOnly": false,
+      "required": false,
+      "selectListView": "myPictures",
+      "selectSearchable": false,
+      "signed": false,
+      "trim": true,
+      "unique": false
+    },
+    {
+      "name": "owner",
+      "label": "Owner",
+      "type": "ref",
+      "viewType": "relationSelect",
+      "commands": [
+        "edit"
+      ],
+      "commonSearchable": false,
+      "createOnRead": false,
+      "defaultValue": "$user.meta.base.member",
+      "eagerLoading": false,
+      "escape": true,
+      "group": "info",
+      "hidden": false,
+      "hideEmpty": false,
+      "history": false,
+      "multiple": false,
+      "onDelete": "cascade",
+      "orderNumber": 40,
+      "sortable": false,
+      "sortableRelation": false,
+      "refClass": "member",
+      "readOnly": true,
+      "required": true,
+      "selectSearchable": false,
+      "signed": false,
+      "trim": true,
+      "unique": false
+    },
+    {
+      "name": "biddings",
+      "label": "Bidding",
+      "type": "backref",
+      "commands": [
+        "create",
+        "edit",
+        "delete"
+      ],
+      "commonSearchable": false,
+      "createOnRead": false,
+      "eagerLoading": false,
+      "escape": true,
+      "group": "bidding",
+      "hidden": false,
+      "hideEmpty": false,
+      "history": false,
+      "multiple": true,
+      "options": {
+        "css": "no-label"
+      },
+      "orderNumber": 50,
+      "sortable": false,
+      "sortableRelation": false,
+      "refAttr": "item",
+      "refClass": "bidding",
+      "readOnly": false,
+      "required": false,
+      "selectSearchable": false,
+      "signed": false,
+      "trim": true,
+      "unique": false
+    }
+  ],
+  "groups": [
+    {
+      "name": "tabs",
+      "label": "Tabs",
+      "loadable": false,
+      "orderNumber": 1000,
+      "readOnly": false,
+      "required": false,
+      "type": "tabs"
+    },
+    {
+      "name": "info",
+      "label": "Info",
+      "loadable": false,
+      "orderNumber": 1010,
+      "parent": "tabs",
+      "readOnly": false,
+      "required": false
+    },
+    {
+      "name": "pictures",
+      "label": "Pictures",
+      "loadable": false,
+      "orderNumber": 1020,
+      "parent": "tabs",
+      "readOnly": false,
+      "required": false
+    },
+    {
+      "name": "bidding",
+      "label": "Bidding",
+      "loadable": false,
+      "orderNumber": 1030,
+      "parent": "tabs",
+      "readOnly": false,
+      "required": false
+    }
+  ]
+}

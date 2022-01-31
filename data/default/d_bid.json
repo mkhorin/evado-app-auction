@@ -1,0 +1,173 @@
+[
+  {
+    "_id": {
+      "$oid": "61eca6630c7362d0af46701d"
+    },
+    "_class": "bid",
+    "_creator": {
+      "$oid": "5ebcbee6697a6c1b106d3fbe"
+    },
+    "creator": {
+      "$oid": "61eb5fe558bcc20ee3096f63"
+    },
+    "bidding": {
+      "$oid": "61eca6110c7362d0af46701c"
+    },
+    "value": 1050,
+    "_createdAt": {
+      "$date": "2022-01-23T00:50:43.276Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "61eca8060c7362d0af46702b"
+    },
+    "_class": "bid",
+    "_creator": {
+      "$oid": "5f24bc814d618d12d44b3bc5"
+    },
+    "creator": {
+      "$oid": "61eb601858bcc20ee3096f66"
+    },
+    "bidding": {
+      "$oid": "61eca6110c7362d0af46701c"
+    },
+    "value": 1400,
+    "_createdAt": {
+      "$date": "2022-01-23T00:57:42.764Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "61ecaa1b0c7362d0af46703a"
+    },
+    "_class": "bid",
+    "_creator": {
+      "$oid": "5f24bd824d618d12d44b3bd5"
+    },
+    "creator": {
+      "$oid": "61eb602258bcc20ee3096f67"
+    },
+    "bidding": {
+      "$oid": "61eca8f80c7362d0af467037"
+    },
+    "value": 70,
+    "_createdAt": {
+      "$date": "2022-01-23T01:06:35.091Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "61ecaa2b0c7362d0af46703b"
+    },
+    "_class": "bid",
+    "_creator": {
+      "$oid": "5f24bd824d618d12d44b3bd5"
+    },
+    "creator": {
+      "$oid": "61eb602258bcc20ee3096f67"
+    },
+    "bidding": {
+      "$oid": "61eca6110c7362d0af46701c"
+    },
+    "value": 1550,
+    "_createdAt": {
+      "$date": "2022-01-23T01:06:51.476Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "61ecab2abad1b624becd8131"
+    },
+    "_class": "bid",
+    "_creator": {
+      "$oid": "5f24bc814d618d12d44b3bc5"
+    },
+    "creator": {
+      "$oid": "61eb601858bcc20ee3096f66"
+    },
+    "bidding": {
+      "$oid": "61eca9fc0c7362d0af467039"
+    },
+    "value": 15,
+    "_createdAt": {
+      "$date": "2022-01-23T01:11:06.563Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "61ecab42bad1b624becd8132"
+    },
+    "_class": "bid",
+    "_creator": {
+      "$oid": "5f24bc814d618d12d44b3bc5"
+    },
+    "creator": {
+      "$oid": "61eb601858bcc20ee3096f66"
+    },
+    "bidding": {
+      "$oid": "61eca8f80c7362d0af467037"
+    },
+    "value": 92,
+    "_createdAt": {
+      "$date": "2022-01-23T01:11:30.396Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "61ecab66bad1b624becd8134"
+    },
+    "_class": "bid",
+    "_creator": {
+      "$oid": "5f24b7b54d618d12d44b3b9e"
+    },
+    "creator": {
+      "$oid": "61eb600e58bcc20ee3096f65"
+    },
+    "bidding": {
+      "$oid": "61eca9fc0c7362d0af467039"
+    },
+    "value": 25,
+    "_createdAt": {
+      "$date": "2022-01-23T01:12:06.364Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "61ecab71bad1b624becd8135"
+    },
+    "_class": "bid",
+    "_creator": {
+      "$oid": "5f24b7b54d618d12d44b3b9e"
+    },
+    "creator": {
+      "$oid": "61eb600e58bcc20ee3096f65"
+    },
+    "bidding": {
+      "$oid": "61eca8f80c7362d0af467037"
+    },
+    "value": 105,
+    "_createdAt": {
+      "$date": "2022-01-23T01:12:17.702Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "61ecb07bc1d6b969a92d06c3"
+    },
+    "_class": "bid",
+    "_creator": {
+      "$oid": "5ebcbee6697a6c1b106d3fbe"
+    },
+    "creator": {
+      "$oid": "61eb5fe558bcc20ee3096f63"
+    },
+    "bidding": {
+      "$oid": "61eca9fc0c7362d0af467039"
+    },
+    "value": 40,
+    "_createdAt": {
+      "$date": "2022-01-23T01:33:47.753Z"
+    }
+  }
+]

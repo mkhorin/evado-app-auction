@@ -1,0 +1,176 @@
+[
+  {
+    "_id": {
+      "$oid": "61eca48a0c7362d0af467019"
+    },
+    "_class": "item",
+    "_creator": {
+      "$oid": "5f24b7b54d618d12d44b3b9e"
+    },
+    "owner": {
+      "$oid": "61eb600e58bcc20ee3096f65"
+    },
+    "name": "Ancient greek amphora",
+    "description": "Lorem ipsum dolor sit amet consectetuer ante quis et dolor **Phasellus**. Nibh id malesuada a **Vivamus** id eros lacus urna aliquam ridiculus. \n\n- Semper ipsum interdum Mauris neque \n- Proin pellentesque id tellus eu urna \n- In nulla\n\nNam **Quisque** laoreet Aenean urna libero Curabitur dolor et Pellentesque adipiscing. \nDonec augue nibh elit ipsum Cum **Morbi** eros platea Cras quis. In dui tempus.",
+    "pictures": [
+      {
+        "$oid": "61eca42e0c7362d0af467015"
+      }
+    ],
+    "_createdAt": {
+      "$date": "2022-01-23T00:42:50.229Z"
+    },
+    "_editor": {
+      "$oid": "5ebcbee6697a6c1b106d3fbe"
+    },
+    "_updatedAt": {
+      "$date": "2022-01-31T00:41:20.468Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "61eca51f0c7362d0af46701a"
+    },
+    "_class": "item",
+    "_creator": {
+      "$oid": "5f24b7b54d618d12d44b3b9e"
+    },
+    "owner": {
+      "$oid": "61eb600e58bcc20ee3096f65"
+    },
+    "name": "Fashionable men's jacket",
+    "description": "Vitae Curabitur risus et dui odio id leo quis orci et. Orci condimentum convallis wisi et Nam In consectetuer elit accumsan tristique. \n\nTellus Curabitur mauris sit velit In semper molestie hendrerit quis et.",
+    "pictures": [
+      {
+        "$oid": "61eca43b0c7362d0af467018"
+      }
+    ],
+    "_createdAt": {
+      "$date": "2022-01-23T00:45:19.785Z"
+    },
+    "_editor": {
+      "$oid": "5ebcbee6697a6c1b106d3fbe"
+    },
+    "_updatedAt": {
+      "$date": "2022-01-31T00:42:15.194Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "61eca6fe0c7362d0af467028"
+    },
+    "_class": "item",
+    "_creator": {
+      "$oid": "5f24bc814d618d12d44b3bc5"
+    },
+    "owner": {
+      "$oid": "61eb601858bcc20ee3096f66"
+    },
+    "name": "Amazing t-shirt",
+    "description": "Mollis pretium mauris nibh lobortis sem Ut ligula congue justo elit. \nDolor odio consequat tincidunt laoreet pretium aliquam mauris Aliquam nec eget. \n\n- Ellentesque eleifend lacus neque mauris condimentum at nulla nisl ridiculus Quisque. \n- In nibh at dolor elit et Fusce elit consectetuer eleifend Curabitur.\n\nAt habitant ac laoreet Vivamus tincidunt In **Maecenas at semper**.",
+    "pictures": [
+      {
+        "$oid": "61eca6ab0c7362d0af467021"
+      },
+      {
+        "$oid": "61eca6b40c7362d0af467024"
+      }
+    ],
+    "_createdAt": {
+      "$date": "2022-01-23T00:53:18.787Z"
+    },
+    "_editor": {
+      "$oid": "5ebcbee6697a6c1b106d3fbe"
+    },
+    "_updatedAt": {
+      "$date": "2022-01-31T00:37:02.673Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "61eca7480c7362d0af467029"
+    },
+    "_class": "item",
+    "_creator": {
+      "$oid": "5f24bc814d618d12d44b3bc5"
+    },
+    "owner": {
+      "$oid": "61eb601858bcc20ee3096f66"
+    },
+    "name": "African hoodie",
+    "description": "Semper tincidunt justo feugiat urna malesuada commodo Aenean Fusce lacus pede.\nConvallis vel vitae mattis tempus pulvinar habitasse justo at urna nulla. \n\nAenean In facilisis mattis wisi urna amet fringilla eget eu.",
+    "pictures": [
+      {
+        "$oid": "61eca6c60c7362d0af467027"
+      }
+    ],
+    "_createdAt": {
+      "$date": "2022-01-23T00:54:32.339Z"
+    },
+    "_editor": {
+      "$oid": "5ebcbee6697a6c1b106d3fbe"
+    },
+    "_updatedAt": {
+      "$date": "2022-01-31T00:42:22.249Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "61eca8ba0c7362d0af467036"
+    },
+    "_class": "item",
+    "_creator": {
+      "$oid": "5ebcbee6697a6c1b106d3fbe"
+    },
+    "owner": {
+      "$oid": "61eb5fe558bcc20ee3096f63"
+    },
+    "name": "Titanium teapot",
+    "description": "Lorem ipsum dolor sit amet consectetuer senectus tortor turpis facilisis justo. **Eget venenatis** magnis et eget **Cras libero** urna egestas vel mattis. \n\n* Nam dui facilisis consequat nec justo lacus interdum pretium quis eros. \n* Cum nibh turpis Pellentesque at id In consectetuer augue nibh pellentesque. \n* Donec eu turpis id enim risus wisi leo elit mauris Curabitur. \n* Morbi consequat ac hendrerit diam nibh Nam augue et Phasellus ut. Dui.\n\nAenean wisi non In Phasellus tempor senectus diam convallis vestibulum et.",
+    "pictures": [
+      {
+        "$oid": "61eca8760c7362d0af467032"
+      },
+      {
+        "$oid": "61eca87c0c7362d0af467035"
+      }
+    ],
+    "_createdAt": {
+      "$date": "2022-01-23T01:00:42.739Z"
+    },
+    "_editor": {
+      "$oid": "5ebcbee6697a6c1b106d3fbe"
+    },
+    "_updatedAt": {
+      "$date": "2022-01-31T00:40:01.626Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "61eca9a10c7362d0af467038"
+    },
+    "_class": "item",
+    "_creator": {
+      "$oid": "5f24bd824d618d12d44b3bd5"
+    },
+    "owner": {
+      "$oid": "61eb602258bcc20ee3096f67"
+    },
+    "name": "Brazilian hoodie",
+    "description": "Lacinia et neque ligula mattis tristique ut consequat eget consequat Curabitur.  Ut malesuada eros mollis dui id interdum libero eu tincidunt Lorem. \n\n- Consectetuer neque \n- Faucibus eros fermentum\n- Adipiscing et lacus \n- Consequat malesuada\n\nAliquam **Curabitur nec sollicitudin** metus sit orci Pellentesque non felis vitae.",
+    "pictures": [
+      {
+        "$oid": "61eca8590c7362d0af46702f"
+      }
+    ],
+    "_createdAt": {
+      "$date": "2022-01-23T01:04:33.802Z"
+    },
+    "_editor": {
+      "$oid": "5ebcbee6697a6c1b106d3fbe"
+    },
+    "_updatedAt": {
+      "$date": "2022-01-31T00:38:19.394Z"
+    }
+  }
+]

@@ -1,0 +1,22 @@
+{
+  "label": "My item",
+  "description": "Public my item",
+  "filter": {
+    "owner": "$user.meta.base.member"
+  },
+  "readOnly": true,
+  "attrs": [
+    {
+      "name": "name",
+      "orderNumber": 10
+    },
+    {
+      "name": "description",
+      "orderNumber": 20
+    },
+    {
+      "name": "pictures",
+      "orderNumber": 30
+    }
+  ]
+}

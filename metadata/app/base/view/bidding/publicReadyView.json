@@ -1,0 +1,30 @@
+{
+  "label": "Public ready view",
+  "filter": {
+    "_state": "ready"
+  },
+  "readOnly": true,
+  "attrs": [
+    {
+      "name": "active",
+      "orderNumber": 20
+    },
+    {
+      "name": "item",
+      "eagerLoading": true,
+      "orderNumber": 30
+    },
+    {
+      "name": "startDate",
+      "orderNumber": 40
+    },
+    {
+      "name": "endDate",
+      "orderNumber": 50
+    },
+    {
+      "name": "nextValue",
+      "orderNumber": 90
+    }
+  ]
+}

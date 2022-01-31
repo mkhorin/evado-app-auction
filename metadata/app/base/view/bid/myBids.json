@@ -1,0 +1,28 @@
+{
+  "label": "My bids",
+  "description": "My bids",
+  "filter": {
+    "creator": "$user.meta.base.member"
+  },
+  "order": {
+    "_id": -1
+  },
+  "readOnly": true,
+  "attrs": [
+    {
+      "name": "value",
+      "orderNumber": 10
+    },
+    {
+      "name": "_createdAt",
+      "orderNumber": 30
+    },
+    {
+      "name": "bidding",
+      "eagerDepth": 2,
+      "eagerLoading": true,
+      "eagerView": "publicReadyView",
+      "orderNumber": 40
+    }
+  ]
+}

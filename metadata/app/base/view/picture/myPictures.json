@@ -1,0 +1,13 @@
+{
+  "label": "My pictures",
+  "filter": {
+    "_creator": "$user"
+  },
+  "readOnly": true,
+  "attrs": [
+    {
+      "name": "file",
+      "orderNumber": 10
+    }
+  ]
+}
