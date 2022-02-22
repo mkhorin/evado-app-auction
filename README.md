@@ -1,7 +1,7 @@
 # Auction Web App
 
-This is a web app built on [Evado Declarative Framework](https://github.com/mkhorin/evado) 
-ensures sale of goods by offering them up for bids, 
+This is a web app built on [Evado Declarative Framework](https://github.com/mkhorin/evado)
+ensures sale of goods by offering them up for bids,
 taking bids, and then selling the item to the highest bidder.
 
 [![Web app built on Evado declarative framework](doc/evado-app.png)](http://nervebit.com)
