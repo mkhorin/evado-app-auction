@@ -4,7 +4,7 @@ This is a web app built on [Evado Declarative Framework](https://github.com/mkho
 ensures sale of goods by offering them up for bids,
 taking bids, and then selling the item to the highest bidder.
 
-[![Web app built on Evado declarative framework](doc/evado-app.png)](http://nervebit.com)
+[![Web app built on Evado declarative framework](doc/evado-app.png)](https://mkhorin.github.io/evado-site/)
 
 ## Docker installation
 
@@ -64,4 +64,4 @@ Password: 123456
 ```
 
 ## Tutorial
-- [Build an App Without Coding](http://nervebit.com)
+- [Build an App Without Coding](https://mkhorin.github.io/evado-site/)
