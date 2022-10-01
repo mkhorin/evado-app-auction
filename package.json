@@ -1,6 +1,6 @@
 {
   "name": "evado-app-auction",
-  "version": "1.3.0",
+  "version": "1.3.1",
   "description": "Auction Web App built on Evado Declarative Framework",
   "author": "Maxim Khorin",
   "license": "MIT",
@@ -21,7 +21,7 @@
     "evado-module-admin": "~5.2.0",
     "evado-module-office": "~5.4.0",
     "evado-module-studio": "~5.4.0",
-    "sharp": "~0.30.0"
+    "sharp": "~0.31.0"
   },
   "scripts": {
     "start": "node console/start"

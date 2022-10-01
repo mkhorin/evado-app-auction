@@ -62,5 +62,5 @@ const user = _controller.user;
      data-thumbnail-url="<%- _url('/api/base/file/thumbnail') %>"
      data-csrf="<%- _controller.getCsrfToken() %>">
 
-    <componen :is="activePage" v-bind="activePageProps"></componen>
+    <component :is="activePage" v-bind="activePageProps"></component>
 </div>
