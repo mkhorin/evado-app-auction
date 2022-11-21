@@ -44,7 +44,7 @@ Vue.component('biddings', {
         },
         async create (data, form) {
             try {
-                Jam.toggleLoader(true);
+                Jam.showLoader();
                 await this.fetchText('create', this.getFetchParams({
                     master: this.getMasterData(),
                     data
@@ -54,7 +54,7 @@ Vue.component('biddings', {
             } catch (err) {
                 form.setErrors(err.message);
             } finally {
-                Jam.toggleLoader(false);
+                Jam.hideLoader();
             }
         },
         async onEdit (id) {
@@ -70,7 +70,7 @@ Vue.component('biddings', {
         },
         async save (data, form) {
             try {
-                Jam.toggleLoader(true);
+                Jam.showLoader();
                 await this.fetchText('update', this.getFetchParams({
                     id: this.formId,
                     data
@@ -80,7 +80,7 @@ Vue.component('biddings', {
             } catch (err) {
                 form.setErrors(err.message);
             } finally {
-                Jam.toggleLoader(false);
+                Jam.hideLoader();
             }
         },
         onStart ({id}) {

@@ -38,14 +38,14 @@ Vue.component('myItems', {
         },
         async create (data, form) {
             try {
-                Jam.toggleLoader(true);
+                Jam.showLoader();
                 await this.fetchText('create', this.getFetchParams({data}));
                 this.$refs.newModal.hide();
                 await this.reload();
             } catch (err) {
                 form.setErrors(err.message);
             } finally {
-                Jam.toggleLoader(false);
+                Jam.hideLoader();
             }
         },
         async onEdit ({id}) {

@@ -14,7 +14,8 @@ Vue.component('model-form-date', {
     },
     methods: {
         isDatetime () {
-            return this.viewType === 'datetime' || this.viewType === 'localDatetime';
+            return this.viewType === 'datetime'
+                || this.viewType === 'localDatetime';
         },
         formatDate () {
             return this.isDatetime()
@@ -22,9 +23,10 @@ Vue.component('model-form-date', {
                 : Jam.FormatHelper.asDate(this.value);
         },
         createPicker () {
+            const format = this.isDatetime() ? 'datetime' : 'date';
             const options = {
                 defaultDate: this.getDefaultDate(this.value),
-                format: Jam.DateHelper.getMomentFormat(this.isDatetime() ? 'datetime' : 'date')
+                format: Jam.DateHelper.getMomentFormat(format)
             };
             this.$picker = $(this.$el.querySelector('.datepicker'));
             this.$picker.datetimepicker({...$.fn.datetimepicker.defaultOptions, ...options});
