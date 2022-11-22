@@ -1,57 +1,57 @@
 <template id="myBids">
-    <div class="page">
+  <div class="page">
 
-        <breadcrumbs>
-            <template #path>
-                <li class="breadcrumb-item">
-                    <a @click.prevent="toMain" href="#" data-t="">Main</a>
-                </li>
-                <li class="breadcrumb-item" data-t="meta">Bids</li>
-            </template>
-        </breadcrumbs>
+    <breadcrumbs>
+      <template #path>
+        <li class="breadcrumb-item">
+          <a @click.prevent="toMain" href="#" data-t="">Main</a>
+        </li>
+        <li class="breadcrumb-item" data-t="meta">Bids</li>
+      </template>
+    </breadcrumbs>
 
-        <h1 data-t="">My bids</h1>
+    <h1 data-t="">My bids</h1>
 
-        <div class="loadable-container">
-            <table v-if="!empty" class="table align-middle">
-                <thead>
-                <tr>
-                    <th data-t="meta">Active</th>
-                    <th data-t="meta">Item</th>
-                    <th data-t="meta">Picture</th>
-                    <th data-t="meta">End date</th>
-                    <th data-t="">My bid</th>
-                    <th data-t="meta">Next value</th>
-                    <th data-t="meta">Created at</th>
-                    <th></th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr v-for="item of items" :key="item.id">
-                    <td>{{item.active | boolean}}</td>
-                    <td>
-                        <a @click.prevent="toAuction(item.bidding)" href="#">{{item.name}}</a>
-                    </td>
-                    <td>
-                        <img v-if="item.picture" :src="item.picture" class="img-thumbnail img-fluid" alt="">
-                    </td>
-                    <td>{{item.endDate | datetime}}</td>
-                    <td>{{item.value | currency}}</td>
-                    <td>{{item.nextValue | currency}}</td>
-                    <td>{{item.date | datetime}}</td>
-                </tr>
-                </tbody>
-            </table>
+    <div class="loadable-container">
+      <table v-if="!empty" class="table align-middle">
+        <thead>
+        <tr>
+          <th data-t="meta">Active</th>
+          <th data-t="meta">Item</th>
+          <th data-t="meta">Picture</th>
+          <th data-t="meta">End date</th>
+          <th data-t="">My bid</th>
+          <th data-t="meta">Next value</th>
+          <th data-t="meta">Created at</th>
+          <th></th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr v-for="item of items" :key="item.id">
+          <td>{{item.active | boolean}}</td>
+          <td>
+            <a @click.prevent="toAuction(item.bidding)" href="#">{{item.name}}</a>
+          </td>
+          <td>
+            <img v-if="item.picture" :src="item.picture" class="img-thumbnail img-fluid" alt="">
+          </td>
+          <td>{{item.endDate | datetime}}</td>
+          <td>{{item.value | currency}}</td>
+          <td>{{item.nextValue | currency}}</td>
+          <td>{{item.date | datetime}}</td>
+        </tr>
+        </tbody>
+      </table>
 
-            <pagination @change="load"></pagination>
+      <pagination @change="load"></pagination>
 
-            <div v-show="!loading && empty" class="alert-warning alert">
-                <span data-t="">No bids found</span>
-            </div>
+      <div v-show="!loading && empty" class="alert-warning alert">
+        <span data-t="">No bids found</span>
+      </div>
 
-            <div v-show="loading" class="loader">
-                <i class="fa fa-spinner fa-spin"></i>
-            </div>
-        </div>
+      <div v-show="loading" class="loader">
+        <i class="fa fa-spinner fa-spin"></i>
+      </div>
     </div>
+  </div>
 </template>

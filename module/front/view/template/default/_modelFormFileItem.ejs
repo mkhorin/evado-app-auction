@@ -1,18 +1,18 @@
 <template id="model-form-file-item">
-    <div :class="{'has-error': error,'file-uploader-item form-group': true}">
-        <template v-if="saved">
-            <div v-if="thumbnail">
-                <img :src="thumbnail" class="img-thumbnail img-fluid" alt="">
-            </div>
-            <div v-else>{{name || id}}</div>
-        </template>
-        <template v-else>
-            <input @change="onChange" type="file" class="form-control-file" accept="image/*">
-            <div class="hint-block">{{hint}}</div>
-        </template>
-        <div class="error-block">{{error}}</div>
-        <button @click="onRemove" class="btn-danger btn-sm btn" type="button">
-            <i class="fas fa-times"></i>
-        </button>
-    </div>
+  <div :class="{'has-error': error,'file-uploader-item form-group': true}">
+    <template v-if="saved">
+      <div v-if="thumbnail">
+        <img :src="thumbnail" class="img-thumbnail img-fluid" alt="">
+      </div>
+      <div v-else>{{name || id}}</div>
+    </template>
+    <template v-else>
+      <input @change="onChange" type="file" class="form-control-file" accept="image/*">
+      <div class="hint-block">{{hint}}</div>
+    </template>
+    <div class="error-block">{{error}}</div>
+    <button @click="onRemove" class="btn-danger btn-sm btn" type="button">
+      <i class="fas fa-times"></i>
+    </button>
+  </div>
 </template>

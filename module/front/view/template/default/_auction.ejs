@@ -1,74 +1,74 @@
 <template id="auction">
-    <div class="page">
+  <div class="page">
 
-        <breadcrumbs>
-            <template #path>
-                <li class="breadcrumb-item">
-                    <a @click.prevent="toMain" href="#" data-t="">Main</a>
-                </li>
-                <li class="breadcrumb-item" data-t="">Auction</li>
-            </template>
-        </breadcrumbs>
+    <breadcrumbs>
+      <template #path>
+        <li class="breadcrumb-item">
+          <a @click.prevent="toMain" href="#" data-t="">Main</a>
+        </li>
+        <li class="breadcrumb-item" data-t="">Auction</li>
+      </template>
+    </breadcrumbs>
 
-        <div class="loadable-container">
-            <template v-if="!loading && id">
+    <div class="loadable-container">
+      <template v-if="!loading && id">
 
-                <h1>{{name}}</h1>
+        <h1>{{name}}</h1>
 
-                <div class="item-description mb-4" v-html="description"></div>
+        <div class="item-description mb-4" v-html="description"></div>
 
-                <div v-if="pictures.length" class="item-pictures mb-4">
-                    <img v-for="picture of pictures" :src="picture"
-                         class="mx-auto thumbnail-transparent thumbnail-sm img-thumbnail img-fluid" alt="">
-                </div>
-
-                <div class="row mb-3">
-                    <div class="col-lg-2 col-md-4">
-                        <span data-t="meta">Active</span>
-                    </div>
-                    <div class="col-lg-10 col-md-8">
-                        {{active | boolean}}
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-lg-2 col-md-4">
-                        <span data-t="meta">Start date</span>
-                    </div>
-                    <div class="col-lg-10 col-md-8">
-                        {{startDate | datetime}}
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-lg-2 col-md-4">
-                        <span data-t="meta">End date</span>
-                    </div>
-                    <div class="col-lg-10 col-md-8">
-                        <b>{{endDate | datetime}}</b>
-                    </div>
-                </div>
-
-                <div v-if="active" class="row mt-3">
-                    <div class="col-lg-2 col-md-4">
-                        <span data-t="">Next minimum bid</span>
-                    </div>
-                    <div class="col-lg-10 col-md-8">
-                        <b>{{nextValue | currency}}</b>
-                    </div>
-                </div>
-
-                <bids @create="load"
-                      :bidding="bidding"
-                      :creation="active"
-                      :next-value="nextValue"
-                      title="Bids">
-                </bids>
-            </template>
-
-            <div v-if="loading" class="loader">
-                <i class="fa fa-spinner fa-spin"></i>
-            </div>
+        <div v-if="pictures.length" class="item-pictures mb-4">
+          <img v-for="picture of pictures" :src="picture"
+             class="mx-auto thumbnail-transparent thumbnail-sm img-thumbnail img-fluid" alt="">
         </div>
+
+        <div class="row mb-3">
+          <div class="col-lg-2 col-md-4">
+            <span data-t="meta">Active</span>
+          </div>
+          <div class="col-lg-10 col-md-8">
+            {{active | boolean}}
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-2 col-md-4">
+            <span data-t="meta">Start date</span>
+          </div>
+          <div class="col-lg-10 col-md-8">
+            {{startDate | datetime}}
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-2 col-md-4">
+            <span data-t="meta">End date</span>
+          </div>
+          <div class="col-lg-10 col-md-8">
+            <b>{{endDate | datetime}}</b>
+          </div>
+        </div>
+
+        <div v-if="active" class="row mt-3">
+          <div class="col-lg-2 col-md-4">
+            <span data-t="">Next minimum bid</span>
+          </div>
+          <div class="col-lg-10 col-md-8">
+            <b>{{nextValue | currency}}</b>
+          </div>
+        </div>
+
+        <bids @create="load"
+            :bidding="bidding"
+            :creation="active"
+            :next-value="nextValue"
+            title="Bids">
+        </bids>
+      </template>
+
+      <div v-if="loading" class="loader">
+        <i class="fa fa-spinner fa-spin"></i>
+      </div>
     </div>
+  </div>
 </template>

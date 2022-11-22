@@ -1,75 +1,75 @@
 <template id="biddings">
-    <div class="loadable-container">
+  <div class="loadable-container">
 
-        <div class="d-flex justify-content-between mt-5 mb-3">
-            <h3 data-t="meta">Bidding</h3>
-            <div class="commands">
-                <button @click="onNew" type="button" class="btn btn-success mb-0">
-                    <span data-t="">New bidding</span>
-                </button>
-            </div>
-        </div>
-
-        <table v-if="!empty" class="table align-middle bg-white">
-            <thead>
-            <tr>
-                <th data-t="meta">ID</th>
-                <th data-t="meta">State</th>
-                <th data-t="meta">Active</th>
-                <th data-t="meta">Start date</th>
-                <th data-t="meta">End date</th>
-                <th></th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr v-for="item of items" :key="item.id">
-                <td>
-                    <a @click.prevent="onBidding(item.id)" href="#">{{item.id}}</a>
-                </td>
-                <td>{{item.stateTitle}}</td>
-                <td>{{item.active | boolean}}</td>
-                <td>{{item.startDate | datetime}}</td>
-                <td>{{item.endDate | datetime}}</td>
-                <td class="text-end">
-                    <button v-if="!isDraft(item)" @click="onStop(item)" class="btn-outline-dark btn" type="button" title="Stop">
-                        <i class="fa fa-pause"></i>
-                    </button>
-                    <button v-if="isDraft(item)" @click="onStart(item)" class="btn-outline-success btn" type="button" title="Start">
-                        <i class="fa fa-play"></i>
-                    </button>
-                    <button v-if="isDraft(item)" @click="onEdit(item.id)" class="btn-outline-primary btn" type="button">
-                        <i class="fas fa-pencil-alt"></i>
-                    </button>
-                    <button @click="onDelete(item.id)" class="btn-outline-danger btn" type="button">
-                        <i class="far fa-trash-alt"></i>
-                    </button>
-                </td>
-            </tr>
-            </tbody>
-        </table>
-
-        <pagination @change="load"></pagination>
-
-        <div v-show="!loading && empty" class="alert-warning alert">
-            <span data-t="">Bidding not found</span>
-        </div>
-
-        <div v-show="loading" class="loader">
-            <i class="fa fa-spinner fa-spin"></i>
-        </div>
-
-        <modal-dialog ref="newModal" :title="formTitle" size="lg">
-            <template #body>
-                <bidding-form ref="newForm" :id="formId"></bidding-form>
-            </template>
-            <template #footer>
-                <button v-show="formId" @click="onSave" class="btn-primary btn">
-                    <span data-t="">Save</span>
-                </button>
-                <button v-show="!formId" @click="onCreate" class="btn-success btn">
-                    <span data-t="">Create</span>
-                </button>
-            </template>
-        </modal-dialog>
+    <div class="d-flex justify-content-between mt-5 mb-3">
+      <h3 data-t="meta">Bidding</h3>
+      <div class="commands">
+        <button @click="onNew" type="button" class="btn btn-success mb-0">
+          <span data-t="">New bidding</span>
+        </button>
+      </div>
     </div>
+
+    <table v-if="!empty" class="table align-middle bg-white">
+      <thead>
+      <tr>
+        <th data-t="meta">ID</th>
+        <th data-t="meta">State</th>
+        <th data-t="meta">Active</th>
+        <th data-t="meta">Start date</th>
+        <th data-t="meta">End date</th>
+        <th></th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr v-for="item of items" :key="item.id">
+        <td>
+          <a @click.prevent="onBidding(item.id)" href="#">{{item.id}}</a>
+        </td>
+        <td>{{item.stateTitle}}</td>
+        <td>{{item.active | boolean}}</td>
+        <td>{{item.startDate | datetime}}</td>
+        <td>{{item.endDate | datetime}}</td>
+        <td class="text-end">
+          <button v-if="!isDraft(item)" @click="onStop(item)" class="btn-outline-dark btn" type="button" title="Stop">
+            <i class="fa fa-pause"></i>
+          </button>
+          <button v-if="isDraft(item)" @click="onStart(item)" class="btn-outline-success btn" type="button" title="Start">
+            <i class="fa fa-play"></i>
+          </button>
+          <button v-if="isDraft(item)" @click="onEdit(item.id)" class="btn-outline-primary btn" type="button">
+            <i class="fas fa-pencil-alt"></i>
+          </button>
+          <button @click="onDelete(item.id)" class="btn-outline-danger btn" type="button">
+            <i class="far fa-trash-alt"></i>
+          </button>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+
+    <pagination @change="load"></pagination>
+
+    <div v-show="!loading && empty" class="alert-warning alert">
+      <span data-t="">Bidding not found</span>
+    </div>
+
+    <div v-show="loading" class="loader">
+      <i class="fa fa-spinner fa-spin"></i>
+    </div>
+
+    <modal-dialog ref="newModal" :title="formTitle" size="lg">
+      <template #body>
+        <bidding-form ref="newForm" :id="formId"></bidding-form>
+      </template>
+      <template #footer>
+        <button v-show="formId" @click="onSave" class="btn-primary btn">
+          <span data-t="">Save</span>
+        </button>
+        <button v-show="!formId" @click="onCreate" class="btn-success btn">
+          <span data-t="">Create</span>
+        </button>
+      </template>
+    </modal-dialog>
+  </div>
 </template>
