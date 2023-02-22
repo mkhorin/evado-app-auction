@@ -24,6 +24,7 @@ module.exports = class BidValueValidator extends Base {
     }
 
     getMessage (value) {
-        return this.createClientMessage(this.message, 'Value must be greater than or equal to {value}', {value});
+        const defaults = 'Value must be greater than or equal to {value}';
+        return this.createClientMessage(this.message, defaults, {value});
     }
 };

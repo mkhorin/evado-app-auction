@@ -17,7 +17,8 @@ Vue.component('model-form-file', {
             });
         },
         onRemove (item) {
-            this.items.splice(this.items.indexOf(item), 1);
+            const index = this.items.indexOf(item);
+            this.items.splice(index, 1);
         },
         normalizeValue () {
             const items = Array.isArray(this.value) ? this.value : this.value ? [this.value] : [];
@@ -25,14 +26,16 @@ Vue.component('model-form-file', {
             this.sources = Array.from(this.items);
         },
         normalizeValueItem (item) {
+            const thumbnail = this.getThumbnailUrl(this.refClass, item._id || item, 'xs');
+            const url = this.getDownloadUrl(this.refClass, item._id || item);
             return {
                 id: item._id || item,
                 name: item.name,
-                thumbnail: this.getThumbnailUrl(this.refClass, item._id || item, 'xs'),
-                url: this.getDownloadUrl(this.refClass, item._id || item),
                 size: Jam.FormatHelper.asBytes(item._size),
                 key: this.getRandomId(),
-                saved: true
+                saved: true,
+                thumbnail,
+                url
             };
         },
         clearValue () {
@@ -47,7 +50,8 @@ Vue.component('model-form-file', {
         },
         getLinks () {
             const links = [];
-            for (const {id, saved} of this.getRefArray('item')) {
+            const items = this.getRefArray('item');
+            for (const {id, saved} of items) {
                 if (!saved && id) {
                     links.push(id);
                 }

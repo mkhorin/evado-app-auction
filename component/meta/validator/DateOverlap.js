@@ -20,8 +20,10 @@ module.exports = class DateOverlapValidator extends Base {
         const item = await model.related.resolve('item');
         const query = await item.related.createQuery('biddings');
         for (const bidding of await query.all()) {
-            if (!model.isId(bidding.getId()) && this.isOverlap(bidding, start, end)) {
-                return model.addError(name, this.getMessage());
+            if (!model.isId(bidding.getId())) {
+                if (this.isOverlap(bidding, start, end)) {
+                    return model.addError(name, this.getMessage());
+                }
             }
         }
     }
