@@ -1,6 +1,6 @@
 {
   "name": "evado-app-auction",
-  "version": "1.6.0",
+  "version": "1.6.1",
   "description": "Auction Web App built on Evado Declarative Framework",
   "author": "Maxim Khorin",
   "license": "MIT",

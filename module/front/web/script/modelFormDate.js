@@ -34,10 +34,15 @@ Vue.component('model-form-date', {
             this.picker = this.$picker.data('DateTimePicker');
         },
         getDefaultDate (value) {
-            return !value ? null : this.utc ? new Date(value.slice(0, -1)) : new Date(value);
+            if (!value) {
+                return null;
+            }
+            return this.utc
+                    ? new Date(value.slice(0, -1))
+                    : new Date(value);
         },
         onChangePickerDate ({date}) {
-            const format = this.picker.options().format;
+            const {format} = this.picker.options();
             const value = date ? moment(moment(date).format(format), format) : '';
             this.value = value ? Jam.DateHelper.stringify(value, this.utc) : '';
             if (!date) {
